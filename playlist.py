@@ -23,6 +23,7 @@ def random_playlist(n_songs):
 def filter_title_artist(initial_songs, title, artist):
     title = title.lower()
     artist = artist.lower()
+    singer_filter_df = pd.DataFrame(None)
     
     if title in initial_songs['title'].to_list():
         target_index = initial_songs[initial_songs['title'] == title]['idx'].iloc[0]

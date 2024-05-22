@@ -91,3 +91,27 @@ document.getElementById('q4').addEventListener('keydown', function(event) {
         handleSubmit(event);
     }
 });
+
+function validateAndSubmitEvaluationForm(event) {
+    event.preventDefault();
+    
+    const form = document.forms['evaluationForm'];
+    const radioButtons = form.elements['evaluation'];
+    let isChecked = false;
+
+    for (let i = 0; i < radioButtons.length; i++) {
+        if (radioButtons[i].checked) {
+            isChecked = true;
+            break;
+        }
+    }
+
+    if (!isChecked) {
+        alert('Please select a rating before submitting.');
+        return false;
+    }
+
+    form.submit();
+}
+
+document.forms['evaluationForm'].addEventListener('submit', validateAndSubmitEvaluationForm);
