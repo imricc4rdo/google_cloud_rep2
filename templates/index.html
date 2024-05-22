@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="survey-container">
-    <form name="surveyForm" action="/submit" method="post"> <!-- onsubmit="return validateForm()" -->
+    <form name="surveyForm" action="/submit" method="post">
         <div class="question active" id="question1">
             <div id="quest">
                 <label for="song">Tell me a song (title) you like.</label>
@@ -41,7 +41,7 @@
         
         <div class="question" id="question4">
             <div id="quest">
-                <label for="descr">Describe me what you are looking for.</label>
+                <label for="descr">Describe me your mood.</label>
             </div>
             <textarea name="descr" id="q4" required placeholder = "Type your text here..."></textarea>
             <div class="button-container">

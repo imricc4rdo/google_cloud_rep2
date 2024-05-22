@@ -31,7 +31,7 @@ def filter_title_artist(initial_songs, title, artist):
         title_filter_df = initial_songs[initial_songs['idx'].isin(similar_songs_idx)]
     else: 
         new_title_vector = d2v_titles.infer_vector(title.split())
-        similar_songs_idx = [int(i[0]) for i in d2v_lyrics.dv.most_similar([new_title_vector], topn=100)]
+        similar_songs_idx = [int(i[0]) for i in d2v_titles.dv.most_similar([new_title_vector], topn=100)]
         title_filter_df = initial_songs[initial_songs['idx'].isin(similar_songs_idx)]
     
     if artist in initial_songs['artist'].to_list():
