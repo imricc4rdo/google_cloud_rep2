@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %} Survey Results {% endblock %}
+
+{% block content %}
+    <h1>Here's your playlist!</h1>
+
+    <br>
+
+    <div class="dashboard">
+        <div class="heading-container">
+            {% for song in model_output %}
+                <h2>{{ song }}</h2>
+            {% endfor %}
+        </div>
+    </div>
+
+    <br>
+
+    <p>The description you provided is: "{{ descr }}".</p>
+    
+    <br><br>
+
+    <form name="surveyForm" action="/evaluation" method="post" onsubmit="return validateForm()">
+        <div class = 'question active' id = 'evauation'>
+            <div id="eval">How consistent do you think the above playlist is with your description?</div>
+            <p>Rate it on a scale from 1 (not consistent at all) to 7 (perfectly consistent).</p>
+
+                <input type="radio" id="1" name="evaluation" value="1" required>
+                <label id="ans" for="1">1</label>
+        
+                <input type="radio" id="2" name="evaluation" value="2">
+                <label id="ans" for="2">2</label>
+        
+                <input type="radio" id="3" name="evaluation" value="3">
+                <label id="ans" for="3">3</label>
+        
+                <input type="radio" id="4" name="evaluation" value="4">
+                <label id="ans" for="4">4</label>
+        
+                <input type="radio" id="5" name="evaluation" value="5">
+                <label id="ans" for="5">5</label>
+        
+                <input type="radio" id="6" name="evaluation" value="6">
+                <label id="ans" for="6">6</label>
+        
+                <input type="radio" id="7" name="evaluation" value="7">
+                <label id="ans" for="7">7</label>
+
+            <br><br>
+    
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+{% endblock %}

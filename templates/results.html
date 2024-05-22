@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %} Survey Results {% endblock %}
+
+{% block content %}
+    <h1>Survey Results</h1>
+
+    <div class="dashboard">
+        <div class="dashboard_item">
+            <h2 id="n_responses">{{ total_responses }}</h2>
+            <p>Total Responses</p>
+        </div>
+    </div>
+
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Time</th>
+                <th>Random?</th>
+                <th>Evaluation</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for response in responses %}
+                <tr>
+                    <td>{{ response.id }}</td>
+                    <td>{{ response.time }}</td>
+                    <td>{{ response.rand_playlist }}</td>
+                    <td>{{ response.evaluation }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

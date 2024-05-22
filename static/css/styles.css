@@ -1,0 +1,179 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+.survey-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    /* color: #333; */
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 0;
+}
+
+#n_responses {
+    margin: 0;
+}
+
+p, #n_responses {
+    color: #333;
+}
+
+form {
+    width: 100%;
+}
+
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+}
+
+#quest {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#eval {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+input[type="number"], input[type="text"], textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first {
+    background-color: #ffbaa5;
+}
+
+.first:hover {
+    background-color: #ffbaa5;
+    cursor: auto;
+}
+
+button, input[type="submit"] {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"] {
+    font-weight: bold;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #e64a19;
+}
+
+@media (max-width: 600px) {
+    .survey-container {
+        padding: 10px;
+    }
+
+    input[type="number"], input[type="text"], textarea {
+        width: calc(100% - 10px);
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+}
+
+.option input[type="checkbox"] {
+    align-items: center;
+}
+
+#ans {
+    margin-right:3%; /* Add space between labels */
+    padding: 0px;
+}
+
+
+.heading-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+

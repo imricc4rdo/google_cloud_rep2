@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %} Simple Survey {% endblock %}
+
+{% block content %}
+<div class="survey-container">
+    <form name="surveyForm" action="/submit" method="post"> <!-- onsubmit="return validateForm()" -->
+        <div class="question active" id="question1">
+            <div id="quest">
+                <label for="song">Tell me a song (title) you like.</label>
+            </div>
+            <input type="text" id="q1" name="song" required>
+            <div class="button-container">
+                <button type="button" class="first">Previous</button>
+                <button type="button" onclick="nextQuestion(1)">Next</button>
+            </div>
+        </div>
+
+        <div class="question" id="question2">
+            <div id="quest">
+                <label for="artist">Tell me an artist you like.</label>
+            </div>
+            <input type="text" id="q2" name="artist" required>
+            <div class="button-container">
+                <button type="button" onclick="prevQuestion(2)">Previous</button>
+                <button type="button" onclick="nextQuestion(2)">Next</button>
+            </div>            
+        </div>
+
+        <div class="question" id="question3">
+            <div id="quest">
+                <label for="nsongs">How many songs do you want?</label>
+            </div>
+            <p>Between 5 and 20</p>
+            <input type="number" id="q3" name="nsongs" required min="5" max="20">
+            <div class="button-container">
+                <button type="button" onclick="prevQuestion(3)">Previous</button>
+                <button type="button" onclick="nextQuestion(3)">Next</button>
+            </div>            
+        </div>
+        
+        <div class="question" id="question4">
+            <div id="quest">
+                <label for="descr">Describe me what you are looking for.</label>
+            </div>
+            <textarea name="descr" id="q4" required placeholder = "Type your text here..."></textarea>
+            <div class="button-container">
+                <button type="button" onclick="prevQuestion(4)">Previous</button>
+                <input type="submit" value="Submit" onclick="nextQuestion(4)">
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    
+</script>
+
+{% endblock %}
