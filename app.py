@@ -39,11 +39,9 @@ def submit():
     global rand_playlist
     
     if prob > 0.5: # Return random playlist
-        print('RANDOM')
         rand_playlist = 1
         model_output = model_output_random[:n_songs]
     else: # Return model playlist
-        print('MODEL')
         rand_playlist = 0
         sentiments = classifier(descr)
         model_output = model_playlist(song, artist, n_songs, sentiments)
