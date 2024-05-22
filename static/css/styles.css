@@ -18,6 +18,7 @@ body {
 .survey-container {
     width: 80%;
     max-width: 500px;
+    padding: 10px;
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -76,11 +77,12 @@ p {
 }
 
 input[type="number"], input[type="text"], textarea {
-    width: 80%;
+    width: 100%;
+    box-sizing: border-box;
     margin-bottom: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    height: 30px;
+    height: 35px;
 }
 
 input[type="checkbox"] {
@@ -126,11 +128,13 @@ button:hover, input[type="submit"]:hover {
 
 @media (max-width: 600px) {
     .survey-container {
+        width: 80%;
         padding: 10px;
     }
 
     input[type="number"], input[type="text"], textarea {
-        width: calc(100% - 10px);
+        /* width: calc(100% - 10px); */
+        width: 100%;
     }
 }
 
