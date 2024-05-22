@@ -16,7 +16,7 @@ body {
 }
 
 .survey-container {
-    width: 100%;
+    width: 80%;
     max-width: 500px;
     background: white;
     padding: 20px;
@@ -27,12 +27,13 @@ body {
 
 h1 {
     text-align: center;
-    /* color: #333; */
     margin-bottom: 20px;
+    font-size: 38px;
 }
 
 h2 {
     margin: 0;
+    font-size: 22px;
 }
 
 #n_responses {
@@ -75,11 +76,11 @@ p {
 }
 
 input[type="number"], input[type="text"], textarea {
-    width: calc(100% - 20px);
-    padding: 8px;
+    width: 80%;
     margin-bottom: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    height: 30px;
 }
 
 input[type="checkbox"] {
@@ -166,7 +167,7 @@ th {
 }
 
 #ans {
-    margin-right:3%; /* Add space between labels */
+    margin-right:4%; /* Add space between labels */
     padding: 0px;
 }
 
